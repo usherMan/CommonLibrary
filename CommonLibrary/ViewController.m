@@ -20,6 +20,7 @@
     
     self.shopTextView.zw_placeHolder =@"请输入用户名";
     self.shopTextView.zw_limitCount=10;
+    
 }
 - (IBAction)btnClick:(id)sender forEvent:(UIEvent *)event {
     SHOWERROR(@"偶奥如皋人寡人龚fei1合肥市")

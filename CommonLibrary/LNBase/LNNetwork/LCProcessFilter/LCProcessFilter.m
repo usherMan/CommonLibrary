@@ -6,8 +6,8 @@
 #import "LCProcessFilter.h"
 #import "LCBaseRequest.h"
 #import "AppDelegate.h"
-#import "LGAlertViewController.h"
-#import "LoginViewController.h"
+//#import "LGAlertViewController.h"
+//#import "LoginViewController.h"
 
 @implementation LCProcessFilter
 /**
@@ -25,17 +25,17 @@
     }
     
     NSMutableDictionary *argumentMutableDict = [[NSMutableDictionary alloc] initWithDictionary:argument];
-    if([SPMobileApplication sharedInstance].isLogined) {
-        SPUser *loginUser = [SPMobileApplication sharedInstance].loginUser;
-        if (loginUser.token) {
-            [argumentMutableDict setValue:loginUser.token forKey:@"token"];
-            NSLog(@"\n%@\n",loginUser.token)
-        }
-        if (loginUser.token) {
-            [argumentMutableDict setValue:loginUser.userid forKey:@"userid"];
-        }
-        [argumentMutableDict setValue:[[SPMobileApplication sharedInstance] getPhoneDeviceID] forKey:@"deviceid"];
-    }
+//    if([SPMobileApplication sharedInstance].isLogined) {
+//        SPUser *loginUser = [SPMobileApplication sharedInstance].loginUser;
+//        if (loginUser.token) {
+//            [argumentMutableDict setValue:loginUser.token forKey:@"token"];
+//            NSLog(@"\n%@\n",loginUser.token)
+//        }
+//        if (loginUser.token) {
+//            [argumentMutableDict setValue:loginUser.userid forKey:@"userid"];
+//        }
+//        [argumentMutableDict setValue:[[SPMobileApplication sharedInstance] getPhoneDeviceID] forKey:@"deviceid"];
+//    }
     return argumentMutableDict;
 }
 
@@ -53,19 +53,19 @@
     if ([response objectForKey:@"code"]) {
         NSString *code = [response objectForKey:@"code"];
         NSString *msg = [response objectForKey:@"msg"];
-        if ([code isEqualToString:@"authError"] && [msg isEqualToString:@"登录设备已更换"]) {
-            if (![[[self getCurrentVC] class] isEqual:[LoginViewController class]]&&![[[self getCurrentVC] class] isEqual:[LGAlertViewController class]]){
-                NSLog(@"%@",response);
-                [[[LGAlertView alloc] initWithTitle:LANGUAGE_MODEL.tip message:LANGUAGE_MODEL.txt_login_other_device style:0 buttonTitles:nil cancelButtonTitle:LANGUAGE_MODEL.done destructiveButtonTitle:nil actionHandler:nil cancelHandler:^(LGAlertView * _Nonnull alertView) {
-                    [[AppDelegate shareAppDelegate] logout];
-                } destructiveHandler:nil] showAnimated:YES completionHandler:nil];
-                AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-                // 清空本地账号
-                [delegate saveUserNameAndPassword:nil password:@"" prefix:@""];
-                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"tripartite_open_id"];
-            }else{
-            }
-        }
+//        if ([code isEqualToString:@"authError"] && [msg isEqualToString:@"登录设备已更换"]) {
+//            if (![[[self getCurrentVC] class] isEqual:[LoginViewController class]]&&![[[self getCurrentVC] class] isEqual:[LGAlertViewController class]]){
+//                NSLog(@"%@",response);
+//                [[[LGAlertView alloc] initWithTitle:LANGUAGE_MODEL.tip message:LANGUAGE_MODEL.txt_login_other_device style:0 buttonTitles:nil cancelButtonTitle:LANGUAGE_MODEL.done destructiveButtonTitle:nil actionHandler:nil cancelHandler:^(LGAlertView * _Nonnull alertView) {
+//                    [[AppDelegate shareAppDelegate] logout];
+//                } destructiveHandler:nil] showAnimated:YES completionHandler:nil];
+//                AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//                // 清空本地账号
+//                [delegate saveUserNameAndPassword:nil password:@"" prefix:@""];
+//                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"tripartite_open_id"];
+//            }else{
+//            }
+//        }
     }
     
     if ([responseObject objectForKey:@"status"]) {

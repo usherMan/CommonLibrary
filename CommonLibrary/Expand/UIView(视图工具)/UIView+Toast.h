@@ -52,6 +52,7 @@ extern NSString * const CSToastPositionBottom;
 - (void)showToast:(UIView *)toast duration:(NSTimeInterval)interval position:(id)point
       tapCallback:(void(^)(void))tapCallback;
 
+//动画--从view中间逐渐放大
 - (void)addAnimationAlert;
 - (void)addAnimationDismiss;
 

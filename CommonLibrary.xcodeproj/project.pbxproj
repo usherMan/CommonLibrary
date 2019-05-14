@@ -452,7 +452,6 @@
 			isa = PBXGroup;
 			children = (
 				5912BCD0228ADC8800B52DF5 /* CommonLbryPrefixHeader.pch */,
-				5912BCD1228ADC8800B52DF5 /* Info.plist */,
 				5912BCD3228ADD0800B52DF5 /* LNMacros.h */,
 			);
 			path = Configure;
@@ -487,6 +486,7 @@
 				5968EEA62282B66300D1041B /* AppDelegate.m */,
 				5968EEA82282B66300D1041B /* ViewController.h */,
 				5968EEA92282B66300D1041B /* ViewController.m */,
+				5912BCD1228ADC8800B52DF5 /* Info.plist */,
 				5968EEC22282D20A00D1041B /* AppDelegate+AutoLogin.h */,
 				5968EEC32282D20A00D1041B /* AppDelegate+AutoLogin.m */,
 				5968EEAB2282B66300D1041B /* Main.storyboard */,
