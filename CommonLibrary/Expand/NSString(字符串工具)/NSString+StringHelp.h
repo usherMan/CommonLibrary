@@ -14,33 +14,43 @@
  *  判断字符串是否为空 YES为空 NO 不为空
  *
  *  @return YES为空 NO 不为空
+ *
+ *  [str isBlankString]，str的值为nil，那么就会返回为nil。而nil。而nil对应的值为0，再对应到Bool上就是NO，判断不了
  */
-#pragma mark [str isBlankString]，str的值为nil，那么就会返回为nil。而nil。而nil对应的值为0，再对应到Bool上就是NO，判断不了
 + (BOOL)isBlankString:(NSString *)str;
 
+#pragma mark NSDate 转 NSString
 /**
- 格式化时间 由时间戳 转化成 年月日
- @return yyyy-MM-dd
+ 返回 yyyy-MM-dd HH:mm:ss 格式时间字符串
+ 
+ @return 格式时间字符串
  */
-- (NSString *)timeFormatterYMD;
-
+- (NSString *)stringOfYMDHMS;
 /**
- 格式化时间 由时间戳 转化成 年月日 时分
- @return yyyy-MM-dd HH:mm
+ 返回 年-月-日  格式时间字符串
+ 
+ @return 格式时间字符串
  */
-- (NSString *)timeFormatterYMDHM;
-
+- (NSString *)stringOfYMD;
 /**
- 格式化时间 由时间戳 转化成 年月日 时分秒
- @return yyyy-MM-dd HH:mm:ss
+ 返回 HH：mm：ss 格式时间字符串
+ 
+ @return 格式时间字符串
  */
-- (NSString *)timeFormatterYMDHMS;
-
+- (NSString*)stringOfHMS;
 /**
- 格式化时间 由时间戳 转化成 时分秒
- @return  HH:mm:ss
+ 返回 HH：mm：ss 格式时间字符串
+ 
+ @param timeInterval 描述
+ @return 格式时间字符串
  */
-- (NSString *)timeFormatterHMS;
++ (NSString*)stringWithTimeInterval:(NSInteger)timeInterval;
+/**
+ 返回 特定格式的字符串（今天，昨天，周几，今年，去年）
+ 
+ @return 时间字符串
+ */
+- (NSString *)timeTextOfDate;
 
 /**
  将某个时间转化成 时间戳
@@ -58,8 +68,7 @@
  */
 - (NSString *)timeInterval;
 
-////////////// 正则表达式相关  //////////////
-
+#pragma mark 正则表达式相关
 /** 邮箱验证 */
 - (BOOL)isValidEmail;
 

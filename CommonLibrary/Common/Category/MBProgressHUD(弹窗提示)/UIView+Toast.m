@@ -105,9 +105,7 @@ NSString * const CSToastPositionBottom          = @"bottom";
 
 - (void)showToast:(UIView *)toast duration:(NSTimeInterval)duration position:(id)position {
     [self showToast:toast duration:duration position:position tapCallback:nil];
-    
 }
-
 
 - (void)showToast:(UIView *)toast duration:(NSTimeInterval)duration position:(id)position
       tapCallback:(void(^)(void))tapCallback

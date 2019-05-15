@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29ABCCB0228C616C0001A854 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ABCCAF228C616C0001A854 /* UIView+Toast.m */; };
 		3B2E8E5CEFCF8454E9C84DB7 /* libPods-CommonLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A26610191EFC56D33FED078 /* libPods-CommonLibrary.a */; };
 		5912BC41228AD0DA00B52DF5 /* MBProgressHUD+Usher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BC35228AD0DA00B52DF5 /* MBProgressHUD+Usher.m */; };
 		5912BC42228AD0DA00B52DF5 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5912BC36228AD0DA00B52DF5 /* MBProgressHUD.bundle */; };
@@ -45,7 +46,6 @@
 		5912BCC9228ADB4E00B52DF5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCB7228ADB4D00B52DF5 /* UIImage+Color.m */; };
 		5912BCCA228ADB4E00B52DF5 /* UILabel+LineSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCBA228ADB4D00B52DF5 /* UILabel+LineSpace.m */; };
 		5912BCCB228ADB4E00B52DF5 /* UIView+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCBD228ADB4D00B52DF5 /* UIView+Nib.m */; };
-		5912BCCC228ADB4E00B52DF5 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCBF228ADB4D00B52DF5 /* UIView+Toast.m */; };
 		5912BCCD228ADB4E00B52DF5 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCC1228ADB4D00B52DF5 /* UIView+ViewController.m */; };
 		5912BCCE228ADB4E00B52DF5 /* UIWindow+Visible.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCC4228ADB4D00B52DF5 /* UIWindow+Visible.m */; };
 		5912BCD2228ADC8800B52DF5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5912BCD1228ADC8800B52DF5 /* Info.plist */; };
@@ -62,6 +62,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29ABCCAE228C616C0001A854 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		29ABCCAF228C616C0001A854 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		2A26610191EFC56D33FED078 /* libPods-CommonLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommonLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5912BC34228AD0DA00B52DF5 /* MBProgressHUD+Usher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Usher.h"; sourceTree = "<group>"; };
 		5912BC35228AD0DA00B52DF5 /* MBProgressHUD+Usher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Usher.m"; sourceTree = "<group>"; };
@@ -140,8 +142,6 @@
 		5912BCBA228ADB4D00B52DF5 /* UILabel+LineSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LineSpace.m"; sourceTree = "<group>"; };
 		5912BCBC228ADB4D00B52DF5 /* UIView+Nib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Nib.h"; sourceTree = "<group>"; };
 		5912BCBD228ADB4D00B52DF5 /* UIView+Nib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Nib.m"; sourceTree = "<group>"; };
-		5912BCBE228ADB4D00B52DF5 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
-		5912BCBF228ADB4D00B52DF5 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		5912BCC0228ADB4D00B52DF5 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
 		5912BCC1228ADB4D00B52DF5 /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
 		5912BCC3228ADB4D00B52DF5 /* UIWindow+Visible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Visible.h"; sourceTree = "<group>"; };
@@ -214,6 +214,8 @@
 		5912BC33228AD0DA00B52DF5 /* MBProgressHUD(弹窗提示) */ = {
 			isa = PBXGroup;
 			children = (
+				29ABCCAE228C616C0001A854 /* UIView+Toast.h */,
+				29ABCCAF228C616C0001A854 /* UIView+Toast.m */,
 				5912BC34228AD0DA00B52DF5 /* MBProgressHUD+Usher.h */,
 				5912BC35228AD0DA00B52DF5 /* MBProgressHUD+Usher.m */,
 				5912BC36228AD0DA00B52DF5 /* MBProgressHUD.bundle */,
@@ -440,8 +442,6 @@
 			children = (
 				5912BCBC228ADB4D00B52DF5 /* UIView+Nib.h */,
 				5912BCBD228ADB4D00B52DF5 /* UIView+Nib.m */,
-				5912BCBE228ADB4D00B52DF5 /* UIView+Toast.h */,
-				5912BCBF228ADB4D00B52DF5 /* UIView+Toast.m */,
 				5912BCC0228ADB4D00B52DF5 /* UIView+ViewController.h */,
 				5912BCC1228ADB4D00B52DF5 /* UIView+ViewController.m */,
 			);
@@ -666,9 +666,9 @@
 				5912BCC9228ADB4E00B52DF5 /* UIImage+Color.m in Sources */,
 				5912BC9F228AD97800B52DF5 /* LCBaseRequest.m in Sources */,
 				5912BCCD228ADB4E00B52DF5 /* UIView+ViewController.m in Sources */,
-				5912BCCC228ADB4E00B52DF5 /* UIView+Toast.m in Sources */,
 				5912BC9D228AD97800B52DF5 /* LNNetBaseModel.m in Sources */,
 				5912BC94228AD97800B52DF5 /* LNBaseTableViewCell.m in Sources */,
+				29ABCCB0228C616C0001A854 /* UIView+Toast.m in Sources */,
 				5968EEAA2282B66300D1041B /* ViewController.m in Sources */,
 				5912BC95228AD97800B52DF5 /* LNBaseTableViewController.m in Sources */,
 				5912BC44228AD0DA00B52DF5 /* JKDBHelper.m in Sources */,
