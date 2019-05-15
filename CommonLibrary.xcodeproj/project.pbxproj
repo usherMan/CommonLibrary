@@ -49,6 +49,8 @@
 		5912BCCD228ADB4E00B52DF5 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCC1228ADB4D00B52DF5 /* UIView+ViewController.m */; };
 		5912BCCE228ADB4E00B52DF5 /* UIWindow+Visible.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCC4228ADB4D00B52DF5 /* UIWindow+Visible.m */; };
 		5912BCD2228ADC8800B52DF5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5912BCD1228ADC8800B52DF5 /* Info.plist */; };
+		5912BCD7228BA5ED00B52DF5 /* NSDate+DateKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCD6228BA5ED00B52DF5 /* NSDate+DateKit.m */; };
+		5912BCDA228BA62400B52DF5 /* USCategoryConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BCD9228BA62400B52DF5 /* USCategoryConst.m */; };
 		5968EEA72282B66300D1041B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5968EEA62282B66300D1041B /* AppDelegate.m */; };
 		5968EEAA2282B66300D1041B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5968EEA92282B66300D1041B /* ViewController.m */; };
 		5968EEAD2282B66300D1041B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5968EEAB2282B66300D1041B /* Main.storyboard */; };
@@ -147,6 +149,10 @@
 		5912BCD0228ADC8800B52DF5 /* CommonLbryPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonLbryPrefixHeader.pch; sourceTree = "<group>"; };
 		5912BCD1228ADC8800B52DF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5912BCD3228ADD0800B52DF5 /* LNMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNMacros.h; sourceTree = "<group>"; };
+		5912BCD5228BA5ED00B52DF5 /* NSDate+DateKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateKit.h"; sourceTree = "<group>"; };
+		5912BCD6228BA5ED00B52DF5 /* NSDate+DateKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateKit.m"; sourceTree = "<group>"; };
+		5912BCD8228BA62400B52DF5 /* USCategoryConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCategoryConst.h; sourceTree = "<group>"; };
+		5912BCD9228BA62400B52DF5 /* USCategoryConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCategoryConst.m; sourceTree = "<group>"; };
 		5968EEA22282B66300D1041B /* CommonLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5968EEA52282B66300D1041B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5968EEA62282B66300D1041B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -197,6 +203,9 @@
 		5912BC32228AD0DA00B52DF5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5912BCD8228BA62400B52DF5 /* USCategoryConst.h */,
+				5912BCD9228BA62400B52DF5 /* USCategoryConst.m */,
+				5912BCD4228BA5ED00B52DF5 /* NSDateKit */,
 				5912BC33228AD0DA00B52DF5 /* MBProgressHUD(弹窗提示) */,
 			);
 			path = Category;
@@ -457,6 +466,15 @@
 			path = Configure;
 			sourceTree = "<group>";
 		};
+		5912BCD4228BA5ED00B52DF5 /* NSDateKit */ = {
+			isa = PBXGroup;
+			children = (
+				5912BCD5228BA5ED00B52DF5 /* NSDate+DateKit.h */,
+				5912BCD6228BA5ED00B52DF5 /* NSDate+DateKit.m */,
+			);
+			path = NSDateKit;
+			sourceTree = "<group>";
+		};
 		5968EE992282B66300D1041B = {
 			isa = PBXGroup;
 			children = (
@@ -586,7 +604,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CommonLibrary/Pods-CommonLibrary-resources.sh",
-				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SSKeychain/Support/SSKeychain.bundle",
@@ -596,7 +613,6 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SSKeychain.bundle",
@@ -669,8 +685,10 @@
 				5912BC41228AD0DA00B52DF5 /* MBProgressHUD+Usher.m in Sources */,
 				5912BCAB228AD97800B52DF5 /* TMMemoryCache.m in Sources */,
 				5912BCCE228ADB4E00B52DF5 /* UIWindow+Visible.m in Sources */,
+				5912BCD7228BA5ED00B52DF5 /* NSDate+DateKit.m in Sources */,
 				5912BC45228AD0DA00B52DF5 /* JKDBModel.m in Sources */,
 				5912BC9B228AD97800B52DF5 /* LNStatusInfoVC.m in Sources */,
+				5912BCDA228BA62400B52DF5 /* USCategoryConst.m in Sources */,
 				5912BCC8228ADB4E00B52DF5 /* RuntimeInvoker.m in Sources */,
 				5968EEB52282B66300D1041B /* main.m in Sources */,
 				5912BCA7228AD97800B52DF5 /* LCQueueRequestAgent.m in Sources */,

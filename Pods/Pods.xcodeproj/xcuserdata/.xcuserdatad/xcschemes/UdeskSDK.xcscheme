@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93EF230D400933593D915D7EA3281256"
+               BlueprintIdentifier = "128DACCE13220486285B54E3C4AC58E5"
                BlueprintName = "UdeskSDK"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libUdeskSDK.a">

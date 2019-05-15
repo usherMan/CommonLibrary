@@ -47,7 +47,6 @@ target 'CommonLibrary' do
   pod 'Bugly', '2.5'
   
   ############### 以上固有导入，非必要禁止修改 ###############
-  # 时间转换
-  pod 'DateTools', '2.0'
+ 
 
 end
