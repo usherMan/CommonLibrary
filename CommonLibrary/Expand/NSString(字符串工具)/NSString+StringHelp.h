@@ -15,14 +15,8 @@
  *
  *  @return YES为空 NO 不为空
  */
-- (BOOL) isBlankString;//判断字符串是否为空  YES为空 NO 不为空
-
-/**
- 判断字符串 不是空
-
- @return YES:不为空  NO:空
- */
-- (BOOL) notBlank;
+#pragma mark [str isBlankString]，str的值为nil，那么就会返回为nil。而nil。而nil对应的值为0，再对应到Bool上就是NO，判断不了
++ (BOOL)isBlankString:(NSString *)str;
 
 /**
  格式化时间 由时间戳 转化成 年月日
@@ -84,8 +78,11 @@
 /** 纯汉字 */
 - (BOOL)isValidChinese;
 
+/** 工商税号 */
+- (BOOL)isValidTaxNo;
+
 /**
- @brief     是否符合IP格式，xxx.xxx.xxx.xxx
+ @brief  是否符合IP格式，xxx.xxx.xxx.xxx
  */
 - (BOOL)isValidIP;
 
@@ -124,14 +121,32 @@
       containOtherCharacter:(NSString *)containOtherCharacter
         firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
 
-/** 去掉两端空格和换行符 */
-- (NSString *)stringByTrimmingBlank;
+/**
+ *  计算 字符串 高度
+ *
+ *  @param font   字体大小
+ *  @param width 限定长度
+ *
+ *  @return 字符串所占位置
+ */
+- (CGSize)textSizeWithFont:(CGFloat)font totalSizeWidth:(CGFloat)width;
+
+//当前字符串是否只包含空白字符和换行符
+- (BOOL)isWhitespaceAndNewlines;
+//去除字符串前后的空白和换行符
+- (NSString *)removeWhiteSpaceAndNewLine;
+//去除字符串空格
+- (NSString *)removeWhiteSpace;
+//去除字符串换行
+- (NSString *)removeNewLine;
 
 /** 去掉html格式 */
 - (NSString *)removeHtmlFormat;
 
-/** 工商税号 */
-- (BOOL)isValidTaxNo;
+// 对 手机号 中间4位处理
+- (NSString *)processPhoneNumber;
+
+
 
 
 @end

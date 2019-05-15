@@ -14,36 +14,19 @@
 /*
  判断字符是否为空
  */
-- (BOOL) isBlankString {
-    if (self == nil || self == NULL) {
++ (BOOL)isBlankString:(NSString *)str {
+    NSString *string = str;
+    if (string == nil || string == NULL) {
         return YES;
     }
-    if ([self isKindOfClass:[NSNull class]]) {
+    if ([string isKindOfClass:[NSNull class]]) {
         return YES;
     }
-    if ([[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
         return YES;
     }
-    if([self isEqualToString:@"null"])
-    {
-        return YES;
-    }
+    
     return NO;
-}
-
-- (BOOL) notBlank{
-
-    if ([self isKindOfClass:[NSNull class]]) {
-        return NO;
-    }
-    if ([[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
-        return NO;
-    }
-
-    if ([self isEqualToString:@"null"]) {
-        return NO;
-    }
-    return YES;
 }
 
 - (NSString *)timeFormatterYMD
@@ -355,10 +338,42 @@
     return [pre evaluateWithObject:self];
 }
 
-/** 去掉两端空格和换行符 */
-- (NSString *)stringByTrimmingBlank
+- (CGSize)textSizeWithFont:(CGFloat)font totalSizeWidth:(CGFloat)width
+{
+    CGRect rect = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:font], NSFontAttributeName,nil] context:nil];
+    
+    CGSize textSize = CGSizeMake(ceil(CGRectGetWidth(rect)), ceil(CGRectGetHeight(rect)));
+    
+    return  textSize ;
+}
+
+- (BOOL)isWhitespaceAndNewlines
+{
+    NSCharacterSet* whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    for (NSInteger i = 0; i < self.length; ++i)
+    {
+        unichar c = [self characterAtIndex:i];
+        if (![whitespace characterIsMember:c])
+        {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (NSString *)removeWhiteSpaceAndNewLine
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (NSString *)removeWhiteSpace
+{
+    return [[self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] componentsJoinedByString:@""];
+}
+
+- (NSString *)removeNewLine
+{
+    return [[self componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
 }
 
 /** 去掉html格式 */
@@ -509,6 +524,13 @@
     NSString *emailRegex = @"[0-9]\\d{13}([0-9]|X)$";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
+}
+// 对 手机号 中间4位处理
+- (NSString *)processPhoneNumber
+{
+    NSString *resultString = nil;
+    resultString =  [self stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+    return resultString;
 }
 
 
