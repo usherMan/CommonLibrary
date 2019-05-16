@@ -19,55 +19,6 @@
  */
 + (BOOL)isBlankString:(NSString *)str;
 
-#pragma mark NSDate 转 NSString
-/**
- 返回 yyyy-MM-dd HH:mm:ss 格式时间字符串
- 
- @return 格式时间字符串
- */
-- (NSString *)stringOfYMDHMS;
-/**
- 返回 年-月-日  格式时间字符串
- 
- @return 格式时间字符串
- */
-- (NSString *)stringOfYMD;
-/**
- 返回 HH：mm：ss 格式时间字符串
- 
- @return 格式时间字符串
- */
-- (NSString*)stringOfHMS;
-/**
- 返回 HH：mm：ss 格式时间字符串
- 
- @param timeInterval 描述
- @return 格式时间字符串
- */
-+ (NSString*)stringWithTimeInterval:(NSInteger)timeInterval;
-/**
- 返回 特定格式的字符串（今天，昨天，周几，今年，去年）
- 
- @return 时间字符串
- */
-- (NSString *)timeTextOfDate;
-
-/**
- 将某个时间转化成 时间戳
- */
-- (NSInteger)timeSwitchTimestamp:(NSString *)formatTime andFormatter:(NSString *)format;
-
-/**
- 将某个时间戳转化成时间
- */
-- (NSString *)timestampSwitchTime:(NSInteger)timestamp andFormatter:(NSString *)format;
-
-/**
- 格式化时间 由时间戳 转化成 时间间隔
- @return 几分钟前
- */
-- (NSString *)timeInterval;
-
 #pragma mark 正则表达式相关
 /** 邮箱验证 */
 - (BOOL)isValidEmail;

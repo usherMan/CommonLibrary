@@ -10,6 +10,13 @@
 #import "USCategoryConst.h"
 @interface NSDate (DateKit)
 
+/**
+ 创建NSDateFormatter非常耗性能（cpu占用很高），耗时，使用时最好维持一个单例
+ 
+ @return 时间格式化器
+ */
++ (NSDateFormatter *)cachedDateFormatter;
+
 #pragma mark NSDate 转成指定格式
 /**
  返回 yyyy-MM-dd HH:mm:ss 格式时间
@@ -38,10 +45,16 @@
  */
 - (NSString*)stringOfHMS;
 /**
+ 返回 HH：mm 格式时间字符串
+ 
+ @return 格式时间字符串
+ */
+- (NSString*)stringOfHM;
+/**
  返回 HH：mm：ss 格式时间字符串
  
  @param timeInterval 描述
- @return 格式时间字符串
+ @return 格式时间字符串（时：分：秒）
  */
 + (NSString*)stringWithTimeInterval:(NSInteger)timeInterval;
 /**
@@ -50,6 +63,22 @@
  @return 时间字符串
  */
 - (NSString *)timeTextOfDate;
+
+/**
+ 将某个时间转化成 时间戳
+ */
+- (NSInteger)timeSwitchTimestamp:(NSString *)formatTime andFormatter:(NSString *)format;
+
+/**
+ 将某个时间戳转化成时间
+ */
+- (NSString *)timestampSwitchTime:(NSInteger)timestamp andFormatter:(NSString *)format;
+
+/**
+ 格式化时间 由时间戳 转化成 时间间隔（几秒前、几分钟）
+ @return 几分钟前
+ */
+- (NSString *)timeIntervalToString:(NSString *)time;
 
 #pragma mark 判断NSDate是否是（今天、昨天、明天、周末）
 - (BOOL)isToday;

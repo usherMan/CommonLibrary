@@ -76,14 +76,19 @@ static const unsigned int allCalendarUnitFlags = NSCalendarUnitYear | NSCalendar
     return [self stringFromDateFormatter:US_DateFormatter_Full];
 }
 
+- (NSString *)stringOfYMD
+{
+    return [self stringFromDateFormatter:US_DateFormatter_YMD];
+}
+
 - (NSString*)stringOfHMS
 {
     return [self stringFromDateFormatter:US_DateFormatter_HMS];
 }
 
-- (NSString *)stringOfYMD
+- (NSString*)stringOfHM
 {
-    return [self stringFromDateFormatter:US_DateFormatter_YMD];
+     return [self stringFromDateFormatter:US_DateFormatter_HM];
 }
 
 - (NSDateComponents *)returnNSDateComponents
@@ -167,6 +172,58 @@ static const unsigned int allCalendarUnitFlags = NSCalendarUnitYear | NSCalendar
     }
     return nil;
 }
+
+#pragma mark - 将某个时间转化成 时间戳
+- (NSInteger)timeSwitchTimestamp:(NSString *)formatTime andFormatter:(NSString *)format{
+    NSDateFormatter *formatter = [NSDate cachedDateFormatter];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:format]; //(@"YYYY-MM-dd hh:mm:ss") ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [formatter setTimeZone:timeZone];
+    NSDate* date = [formatter dateFromString:formatTime]; //------------将字符串按formatter转成nsdate
+    //时间转时间戳的方法:
+    NSInteger timeSp = [[NSNumber numberWithDouble:[date timeIntervalSince1970]] integerValue];
+    NSLog(@"将某个时间转化成 时间戳&&&&&&&timeSp:%ld",(long)timeSp); //时间戳的值
+    return timeSp;
+}
+#pragma mark - 将某个时间戳转化成 时间
+
+- (NSString *)timestampSwitchTime:(NSInteger)timestamp andFormatter:(NSString *)format{
+    NSDateFormatter *formatter = [NSDate cachedDateFormatter];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:format]; // （@"YYYY-MM-dd hh:mm:ss"）----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [formatter setTimeZone:timeZone];
+    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timestamp];
+    NSLog(@"1296035591  = %@",confromTimesp);
+    NSString *confromTimespStr = [formatter stringFromDate:confromTimesp];
+    return confromTimespStr;
+}
+
+- (NSString *)timeIntervalToString:(NSString *)time {
+
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time.integerValue];
+    NSInteger interval = -[date timeIntervalSinceDate:[NSDate new]];
+    if (interval < 1) {
+        return @"刚刚";
+    }else if (interval < 60) {
+        return [NSString stringWithFormat:@"%ld秒前",interval];
+    }else if (interval < 60*60) {
+        return [NSString stringWithFormat:@"%ld分钟前",interval/60];
+    }else if (interval < 60*60*24) {
+        return [NSString stringWithFormat:@"今天%@",[date stringOfHM]];
+    }else if (interval < 60*60*24*2) {
+        return [NSString stringWithFormat:@"昨天%@",[date stringOfHM]];
+    }else {
+        return [date stringOfYMD];
+    }
+
+    return nil;
+}
+
+
 #pragma mark 判断NSDate是否是（今天、昨天、明天、周末）
 - (BOOL)isToday
 {

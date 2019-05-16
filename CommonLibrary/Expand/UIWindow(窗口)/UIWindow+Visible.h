@@ -10,7 +10,6 @@
 
 @interface UIWindow (Visible)
 
-
 /**
  获取窗口的可视控制器
 

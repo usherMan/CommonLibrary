@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MBProgressHUD+Usher.h"
+
 @interface ViewController ()
 
 @end
@@ -18,9 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+
 }
 - (IBAction)btnClick:(id)sender forEvent:(UIEvent *)event {
-    [ self.view  makeToastActivity];
+    
 }
 
 @end
