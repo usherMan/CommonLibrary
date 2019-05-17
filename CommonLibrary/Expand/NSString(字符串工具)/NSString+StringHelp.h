@@ -1,9 +1,9 @@
 //
-//  NSString+StringHelp.h
-//  MobileProject
+//  UITextView+PlaceHolder.h
+//  CommonLibrary
 //
-//  Created by 云网通 on 16/8/23.
-//  Copyright © 2016年 wujunyang. All rights reserved.
+//  Created by usher on 2019/5/14.
+//  Copyright © 2019年 usher. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

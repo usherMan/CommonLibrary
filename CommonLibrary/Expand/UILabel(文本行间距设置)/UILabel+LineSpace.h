@@ -1,10 +1,9 @@
 //
-//  UILabel+LineSpace.h
-//  LNMobileProject
+//  UITextView+PlaceHolder.h
+//  CommonLibrary
 //
-//  Created by  六牛科技 on 2017/9/13.
-//
-//  山东六牛网络科技有限公司 https://liuniukeji.com
+//  Created by usher on 2019/5/14.
+//  Copyright © 2019年 usher. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

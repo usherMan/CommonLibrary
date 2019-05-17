@@ -10,11 +10,7 @@
 
 @interface UIWindow (Visible)
 
-/**
- 获取窗口的可视控制器
-
- @return 控制器
- */
-- (UIViewController *)getVisibleViewController;
+//获取当前屏幕显示的viewcontroller
+- (UIViewController *)getCurrentVC;
 
 @end
