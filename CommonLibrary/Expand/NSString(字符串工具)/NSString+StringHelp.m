@@ -430,5 +430,12 @@
     return resultString;
 }
 
-
++ (NSString *)newString:(NSString *)string
+{
+    if (string == NULL || [self isBlankString:string] || !self)
+    {
+        string = @"";
+    }
+    return string;
+}
 @end

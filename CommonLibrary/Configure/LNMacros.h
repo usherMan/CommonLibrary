@@ -48,6 +48,9 @@
 #define TextRedColor    HEXCOLOR(0xfd6668)
 #define TextWhiteColor  HEXCOLOR(0xFFFFFF)
 
+#define USUIIImage( __name ) [UIImage imageNamed:__name]
+#define USKeyWindow [UIApplication sharedApplication].keyWindow
+
 // iOS 10 不打印日志 通过以下方式解决
 #ifdef DEBUG
 #define NSLog(FORMAT, ...) fprintf(stderr,"%s\n",[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);

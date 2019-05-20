@@ -56,16 +56,6 @@ static const unsigned int allCalendarUnitFlags = NSCalendarUnitYear | NSCalendar
     return currDate;
 }
 
-// 返回 格式字符串
-- (NSString *)stringFromDateFormatter:(NSString *)dateFormat
-{
-    NSDateFormatter *dateformatter = [NSDate cachedDateFormatter];
-    [dateformatter setDateFormat:dateFormat];
-    
-    NSString *string= [dateformatter stringFromDate:self];
-    return string;
-}
-
 - (NSDate *)dateOfYMDHMS
 {
     return [self dateWithDateFormatter:US_DateFormatter_Full];
@@ -89,6 +79,16 @@ static const unsigned int allCalendarUnitFlags = NSCalendarUnitYear | NSCalendar
 - (NSString*)stringOfHM
 {
      return [self stringFromDateFormatter:US_DateFormatter_HM];
+}
+
+// 返回 格式字符串
+- (NSString *)stringFromDateFormatter:(NSString *)dateFormat
+{
+    NSDateFormatter *dateformatter = [NSDate cachedDateFormatter];
+    [dateformatter setDateFormat:dateFormat];
+    
+    NSString *string= [dateformatter stringFromDate:self];
+    return string;
 }
 
 - (NSDateComponents *)returnNSDateComponents

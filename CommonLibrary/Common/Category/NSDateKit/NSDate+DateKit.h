@@ -50,6 +50,14 @@
  @return 格式时间字符串
  */
 - (NSString*)stringOfHM;
+
+/**
+ 返回格式化自定义的时间字符串
+
+ @param format 自定义的时间格式
+ @return 字符串
+ */
+- (NSString *)stringFromDateFormatter:(NSString *)dateFormat
 /**
  返回 HH：mm：ss 格式时间字符串
  

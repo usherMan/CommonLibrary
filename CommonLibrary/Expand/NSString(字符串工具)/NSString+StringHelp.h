@@ -106,7 +106,11 @@
 // 对 手机号 中间4位处理
 - (NSString *)processPhoneNumber;
 
-
+/**
+ *  如果服务器返回的数据是nsnull，转化为@“”
+ *
+ */
++ (NSString *)newString:(NSString *)string;
 
 
 @end
