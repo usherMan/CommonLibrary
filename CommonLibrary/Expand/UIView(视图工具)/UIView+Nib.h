@@ -1,9 +1,9 @@
 //
 //  UIView+Nib.h
-//  MobileProject
+//  CommonLibrary
 //
-//  Created by LiuNiu-MacMini-YQ on 16/9/18.
-//  Copyright © 2016年 wujunyang. All rights reserved.
+//  Created by usher on 2019/5/14.
+//  Copyright © 2019年 usher. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

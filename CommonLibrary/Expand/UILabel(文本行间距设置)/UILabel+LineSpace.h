@@ -25,5 +25,4 @@
  */
 + (void)changeSpaceForLabel:(UILabel *)label withLineSpace:(float)lineSpace WordSpace:(float)wordSpace;
 
-
 @end

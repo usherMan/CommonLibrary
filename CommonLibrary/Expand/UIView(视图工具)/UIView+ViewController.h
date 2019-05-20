@@ -10,9 +10,8 @@
 
 @interface UIView (ViewController)
 
-
 /**
- 获取视图的控制器
+ 获取视图对应的控制器
 
  @return 控制器
  */
