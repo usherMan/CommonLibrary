@@ -235,15 +235,6 @@
     return [pre evaluateWithObject:self];
 }
 
-- (CGSize)textSizeWithFont:(CGFloat)font totalSizeWidth:(CGFloat)width
-{
-    CGRect rect = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:font], NSFontAttributeName,nil] context:nil];
-    
-    CGSize textSize = CGSizeMake(ceil(CGRectGetWidth(rect)), ceil(CGRectGetHeight(rect)));
-    
-    return  textSize ;
-}
-
 - (BOOL)isWhitespaceAndNewlines
 {
     NSCharacterSet* whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];

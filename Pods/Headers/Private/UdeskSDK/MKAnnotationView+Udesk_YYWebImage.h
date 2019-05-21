@@ -1,1 +1,0 @@
-../../../UdeskSDK/UdeskSDK/UDChatMessage/UDTools/UDVendor/YYWebImage/Categories/MKAnnotationView+Udesk_YYWebImage.h

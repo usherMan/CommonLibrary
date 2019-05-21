@@ -1,1 +1,0 @@
-../../../UdeskSDK/UdeskSDK/UDChatMessage/UDTools/UDVendor/UDPhotoViewer/UdeskPhotoManeger.h

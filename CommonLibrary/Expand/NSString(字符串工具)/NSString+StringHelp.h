@@ -81,16 +81,6 @@
       containOtherCharacter:(NSString *)containOtherCharacter
         firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
 
-/**
- *  计算 字符串 高度
- *
- *  @param font   字体大小
- *  @param width 限定长度
- *
- *  @return 字符串所占位置
- */
-- (CGSize)textSizeWithFont:(CGFloat)font totalSizeWidth:(CGFloat)width;
-
 //当前字符串是否只包含空白字符和换行符
 - (BOOL)isWhitespaceAndNewlines;
 //去除字符串前后的空白和换行符

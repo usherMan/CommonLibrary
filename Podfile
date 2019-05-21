@@ -18,12 +18,9 @@ target 'CommonLibrary' do
   # 布局
   pod 'Masonry','~>1.1'
   pod 'SDAutoLayout','~>2.2'
-  pod 'UdeskSDK','~>3.9'
   
   # HUD
-  pod 'SVProgressHUD','~>2.2'
   pod 'MBProgressHUD', '~> 0.9'
-  pod 'AJToastHub', '~> 1.0' #https://github.com/AbooJan/AJToastHub
   
   # 弹出框
   pod 'ActionSheetPicker-3.0','~>2.3'

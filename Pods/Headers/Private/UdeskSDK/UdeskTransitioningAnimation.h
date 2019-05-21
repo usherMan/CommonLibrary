@@ -1,1 +1,0 @@
-../../../UdeskSDK/UdeskSDK/UDChatMessage/UDTools/UDAnimation/UdeskTransitioningAnimation.h

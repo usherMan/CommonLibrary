@@ -13,7 +13,6 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 // pod 集成类
-#import <ReactiveCocoa.h>
 #import <SDWebImageManager.h>
 #import <UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
@@ -23,10 +22,7 @@
 #import <SDAutoLayout.h>
 #import <SDCycleScrollView.h>
 #import <HMSegmentedControl.h>
-#import <SVProgressHUD.h>
 #import <MBProgressHUD.h>
-#import <AJToast.h>
-#import <Udesk.h>
 
 
 #import <ActionSheetPicker.h>
@@ -35,11 +31,11 @@
 
 #import <MJRefresh.h>
 #import <MJExtension.h>
-//#import "InputKit.h"
 
 #import "OpenShareHeader.h"
 #import "UIView+Nib.h"
 #import "UIView+Toast.h"
+#import "MBProgressHUD+Usher.h"
 #import "UICKeyChainStore.h"
 
 //自定义view

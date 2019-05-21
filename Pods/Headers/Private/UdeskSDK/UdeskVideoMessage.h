@@ -1,1 +1,0 @@
-../../../UdeskSDK/UdeskSDK/UDChatMessage/UDIM/Models/Messages/UdeskVideoMessage.h

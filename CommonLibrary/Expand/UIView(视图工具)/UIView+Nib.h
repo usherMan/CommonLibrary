@@ -10,7 +10,6 @@
 
 @interface UIView (Nib)
 
-
 /**
  nib文件初始化视图
 

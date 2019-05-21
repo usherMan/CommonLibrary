@@ -95,6 +95,7 @@
 
     LNBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifer];
     cell.indexPath = indexPath;
+    cell.delegete =self;
     if (indexPath.row < self.dataArray.count) {
         [cell setData:self.dataArray[indexPath.row]];
     }
@@ -165,6 +166,9 @@
 
 - (void)setCellNibName:(NSString *)cellNibName {
     _cellNibName = cellNibName;
+//    if ([_cellIdentifer isEqualToString:@"LNBaseTableViewCell"]) {
+//        _cellIdentifer = cellNibName;
+//    }
     if ([self.cellIdentifer isEqualToString:@"LNBaseTableViewCell"]) {
         self.cellIdentifer = self.cellNibName;
         [self.tableView registerNib:[UINib nibWithNibName:self.cellNibName bundle:nil] forCellReuseIdentifier:self.cellIdentifer];

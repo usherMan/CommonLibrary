@@ -1,1 +1,0 @@
-../../../UdeskSDK/UdeskSDK/SDK/UdeskOrganization.h

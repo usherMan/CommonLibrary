@@ -20,7 +20,6 @@
 		5912BC93228AD97800B52DF5 /* LNBaseTableViewAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BC51228AD97800B52DF5 /* LNBaseTableViewAPI.m */; };
 		5912BC94228AD97800B52DF5 /* LNBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BC53228AD97800B52DF5 /* LNBaseTableViewCell.m */; };
 		5912BC95228AD97800B52DF5 /* LNBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BC55228AD97800B52DF5 /* LNBaseTableViewController.m */; };
-		5912BC96228AD97800B52DF5 /* LNBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BC57228AD97800B52DF5 /* LNBaseTableViewModel.m */; };
 		5912BC97228AD97800B52DF5 /* LNBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BC5A228AD97800B52DF5 /* LNBaseVC.m */; };
 		5912BC9A228AD97800B52DF5 /* LNEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BC63228AD97800B52DF5 /* LNEncryption.m */; };
 		5912BC9B228AD97800B52DF5 /* LNStatusInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5912BC65228AD97800B52DF5 /* LNStatusInfoVC.m */; };
@@ -59,6 +58,8 @@
 		5968EEB52282B66300D1041B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5968EEB42282B66300D1041B /* main.m */; };
 		5968EEBE2282BA0B00D1041B /* AppDelegate+ThirdParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5968EEBD2282BA0B00D1041B /* AppDelegate+ThirdParty.m */; };
 		5968EEC42282D20A00D1041B /* AppDelegate+AutoLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5968EEC32282D20A00D1041B /* AppDelegate+AutoLogin.m */; };
+		59D3205E2293C2D60002E1F6 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D3205D2293C2D60002E1F6 /* NSString+Size.m */; };
+		59D320612293C3FB0002E1F6 /* UIIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D320602293C3FB0002E1F6 /* UIIView+Extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,8 +88,6 @@
 		5912BC53228AD97800B52DF5 /* LNBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBaseTableViewCell.m; sourceTree = "<group>"; };
 		5912BC54228AD97800B52DF5 /* LNBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNBaseTableViewController.h; sourceTree = "<group>"; };
 		5912BC55228AD97800B52DF5 /* LNBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBaseTableViewController.m; sourceTree = "<group>"; };
-		5912BC56228AD97800B52DF5 /* LNBaseTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNBaseTableViewModel.h; sourceTree = "<group>"; };
-		5912BC57228AD97800B52DF5 /* LNBaseTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBaseTableViewModel.m; sourceTree = "<group>"; };
 		5912BC59228AD97800B52DF5 /* LNBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNBaseVC.h; sourceTree = "<group>"; };
 		5912BC5A228AD97800B52DF5 /* LNBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBaseVC.m; sourceTree = "<group>"; };
 		5912BC61228AD97800B52DF5 /* LNBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNBlock.h; sourceTree = "<group>"; };
@@ -166,6 +165,10 @@
 		5968EEBD2282BA0B00D1041B /* AppDelegate+ThirdParty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ThirdParty.m"; sourceTree = "<group>"; };
 		5968EEC22282D20A00D1041B /* AppDelegate+AutoLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AutoLogin.h"; sourceTree = "<group>"; };
 		5968EEC32282D20A00D1041B /* AppDelegate+AutoLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AutoLogin.m"; sourceTree = "<group>"; };
+		59D3205C2293C2D60002E1F6 /* NSString+Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		59D3205D2293C2D60002E1F6 /* NSString+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		59D3205F2293C3FB0002E1F6 /* UIView+Extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
+		59D320602293C3FB0002E1F6 /* UIIView+Extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIIView+Extend.m"; sourceTree = "<group>"; };
 		8E11F58A9D6860FBC0D82076 /* Pods-CommonLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommonLibrary/Pods-CommonLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		CC41FE78BB88E44166DDB78A /* Pods-CommonLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommonLibrary/Pods-CommonLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,8 +297,6 @@
 				5912BC53228AD97800B52DF5 /* LNBaseTableViewCell.m */,
 				5912BC54228AD97800B52DF5 /* LNBaseTableViewController.h */,
 				5912BC55228AD97800B52DF5 /* LNBaseTableViewController.m */,
-				5912BC56228AD97800B52DF5 /* LNBaseTableViewModel.h */,
-				5912BC57228AD97800B52DF5 /* LNBaseTableViewModel.m */,
 			);
 			path = LNBaseTableVC;
 			sourceTree = "<group>";
@@ -415,6 +416,8 @@
 				5912BCB0228ADB4D00B52DF5 /* NSString+PinYin.m */,
 				5912BCB1228ADB4D00B52DF5 /* NSString+StringHelp.h */,
 				5912BCB2228ADB4D00B52DF5 /* NSString+StringHelp.m */,
+				59D3205C2293C2D60002E1F6 /* NSString+Size.h */,
+				59D3205D2293C2D60002E1F6 /* NSString+Size.m */,
 			);
 			path = "NSString(字符串工具)";
 			sourceTree = "<group>";
@@ -442,6 +445,8 @@
 			children = (
 				5912BCBC228ADB4D00B52DF5 /* UIView+Nib.h */,
 				5912BCBD228ADB4D00B52DF5 /* UIView+Nib.m */,
+				59D3205F2293C3FB0002E1F6 /* UIView+Extend.h */,
+				59D320602293C3FB0002E1F6 /* UIIView+Extend.m */,
 				5912BCC0228ADB4D00B52DF5 /* UIView+ViewController.h */,
 				5912BCC1228ADB4D00B52DF5 /* UIView+ViewController.m */,
 			);
@@ -607,18 +612,14 @@
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SSKeychain/Support/SSKeychain.bundle",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
-				"${PODS_ROOT}/UdeskSDK/UdeskSDK/UDChatMessage/UDResource/UdeskBundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SSKeychain.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UdeskBundle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -664,6 +665,7 @@
 				5912BCA3228AD97800B52DF5 /* LCChainRequestAgent.m in Sources */,
 				5912BCCB228ADB4E00B52DF5 /* UIView+Nib.m in Sources */,
 				5912BCC9228ADB4E00B52DF5 /* UIImage+Color.m in Sources */,
+				59D3205E2293C2D60002E1F6 /* NSString+Size.m in Sources */,
 				5912BC9F228AD97800B52DF5 /* LCBaseRequest.m in Sources */,
 				5912BCCD228ADB4E00B52DF5 /* UIView+ViewController.m in Sources */,
 				5912BC9D228AD97800B52DF5 /* LNNetBaseModel.m in Sources */,
@@ -676,8 +678,8 @@
 				5968EEBE2282BA0B00D1041B /* AppDelegate+ThirdParty.m in Sources */,
 				5912BCA2228AD97800B52DF5 /* LCChainRequest.m in Sources */,
 				5912BC91228AD97800B52DF5 /* UIView+EmptyDataSet.m in Sources */,
+				59D320612293C3FB0002E1F6 /* UIIView+Extend.m in Sources */,
 				5912BC90228AD97800B52DF5 /* EmptyDataSource.m in Sources */,
-				5912BC96228AD97800B52DF5 /* LNBaseTableViewModel.m in Sources */,
 				5912BCC7228ADB4E00B52DF5 /* NSString+StringHelp.m in Sources */,
 				5912BCA5228AD97800B52DF5 /* LCNetworkConfig.m in Sources */,
 				5912BCC6228ADB4E00B52DF5 /* NSString+PinYin.m in Sources */,

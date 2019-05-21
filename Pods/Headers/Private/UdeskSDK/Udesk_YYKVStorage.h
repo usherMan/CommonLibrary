@@ -1,1 +1,0 @@
-../../../UdeskSDK/UdeskSDK/UDChatMessage/UDTools/UDVendor/YYWebImage/Cache/Udesk_YYKVStorage.h

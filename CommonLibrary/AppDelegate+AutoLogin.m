@@ -114,7 +114,7 @@
  */
 - (void)presentLoginVC:(NSString *)error {
     if (error.length > 0) {
-        [SVProgressHUD showErrorWithStatus:error];
+        [MBProgressHUD showError:error];
     }
 //    LoginViewController *vc = [[LoginViewController alloc] init];
 //    LNNavigationController *navi = [[LNNavigationController alloc] initWithRootViewController:vc];

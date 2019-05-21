@@ -11,14 +11,14 @@
 @implementation UIWindow (Visible)
 
 //获取当前屏幕显示的viewcontroller
-- (UIViewController *)getCurrentVC
++ (UIViewController *)getCurrentVC
 {
     UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    UIViewController *currentVC = [self getCurrentVCFrom:rootViewController];
+    UIViewController *currentVC = [UIWindow getCurrentVCFrom:rootViewController];
     return currentVC;
 }
 
-- (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC
++ (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC
 {
     UIViewController *currentVC;
     if ([rootVC presentedViewController]) {

@@ -15,8 +15,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - AJToastHub (1.0.0):
-    - pop (~> 1.0.8)
   - Bugly (2.5.0)
   - CocoaSecurity (1.2.4)
   - EGOCache (2.2.0)
@@ -31,7 +29,6 @@ PODS:
   - MJExtension (3.0.16)
   - MJRefresh (3.1.16)
   - OpenShare (0.0.1)
-  - pop (1.0.12)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -49,20 +46,12 @@ PODS:
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
   - SSKeychain (1.4.1)
-  - SVProgressHUD (2.2.5)
   - TZImagePickerController (2.2.6)
-  - UdeskSDK (3.9.3):
-    - UdeskSDK/SDK (= 3.9.3)
-    - UdeskSDK/UIKit (= 3.9.3)
-  - UdeskSDK/SDK (3.9.3)
-  - UdeskSDK/UIKit (3.9.3):
-    - UdeskSDK/SDK
   - UICKeyChainStore (2.1.2)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0 (~> 2.3)
   - AFNetworking (~> 3.2)
-  - AJToastHub (~> 1.0)
   - Bugly (= 2.5)
   - CocoaSecurity (~> 1.2)
   - EGOCache (~> 2.2)
@@ -80,16 +69,13 @@ DEPENDENCIES:
   - SDWebImage (~> 4.4)
   - SDWebImage/GIF (~> 4.4)
   - SSKeychain (~> 1.4)
-  - SVProgressHUD (~> 2.2)
   - TZImagePickerController (~> 2.1)
-  - UdeskSDK (~> 3.9)
   - UICKeyChainStore (~> 2.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ActionSheetPicker-3.0
     - AFNetworking
-    - AJToastHub
     - Bugly
     - CocoaSecurity
     - EGOCache
@@ -102,21 +88,17 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - OpenShare
-    - pop
     - ReactiveCocoa
     - SDAutoLayout
     - SDCycleScrollView
     - SDWebImage
     - SSKeychain
-    - SVProgressHUD
     - TZImagePickerController
-    - UdeskSDK
     - UICKeyChainStore
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AJToastHub: 8cf24c7575476d3c0ba0962f5f52ae84e25943ba
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
   EGOCache: 191fd213da6804d487b49b1a91772ba904f3e324
@@ -129,17 +111,14 @@ SPEC CHECKSUMS:
   MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
-  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TZImagePickerController: 3b25b39ba2e28984fb51bbf3ca5187ffccebb239
-  UdeskSDK: 6d3ed1bbe692e7149e559fd2889b04efa9292c27
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
 
-PODFILE CHECKSUM: 6f707cd215c0ac788c76bc64ae10abda7707380c
+PODFILE CHECKSUM: bd754184f9ebb4daf021e35328d67fbcfdebc4e3
 
 COCOAPODS: 1.5.2

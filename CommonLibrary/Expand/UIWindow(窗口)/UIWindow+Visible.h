@@ -11,6 +11,6 @@
 @interface UIWindow (Visible)
 
 //获取当前屏幕显示的viewcontroller
-- (UIViewController *)getCurrentVC;
++ (UIViewController *)getCurrentVC;
 
 @end

@@ -26,7 +26,7 @@ typedef void(^FailedBlock)(NSString *errorMsg);
 /**
  !!!! 单元格的名称，需要在子类中指定自定义的单元格nib文件的名称
  */
-@property (nonatomic, copy) NSString *cellNibName;
+@property (nonatomic, copy,nonnull) NSString *cellNibName;
 
 /**
  单元格的唯一标示，可以在子类中自定义，默认为cellNibName或@"LNBaseTableViewCell"

@@ -1,1 +1,0 @@
-../../../UdeskSDK/UdeskSDK/UDChatMessage/UDIM/Views/ChatView/UDStructView/UdeskStructView.h

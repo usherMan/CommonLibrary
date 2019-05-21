@@ -7,7 +7,6 @@
 //
 
 #import "LNBaseVC.h"
-#import "UIWindow+Visible.h"
 #import "AppDelegate.h"
 @interface LNBaseVC ()
 
