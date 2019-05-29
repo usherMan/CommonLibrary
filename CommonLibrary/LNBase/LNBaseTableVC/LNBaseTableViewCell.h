@@ -11,7 +11,13 @@
 #import <UIKit/UIKit.h>
 
 @protocol LNBaseTableViewCellDelegate <NSObject>
-
+/**
+ 单元格子视图被点击
+ 
+ @param subView 子视图
+ @param type 按钮类型
+ @param indexPath 位置
+ */
 - (void)cellSubViewDidClick:(id)subView type:(NSString *)type cellIndexPath:(NSIndexPath *)indexPath;
 
 @end

@@ -21,8 +21,8 @@
 //    [self.textF1 changeLine]
 
 }
-- (IBAction)btnClick:(id)sender forEvent:(UIEvent *)event {
-    
+- (IBAction)btnClick:(UIButton *)sender {
 }
+
 
 @end

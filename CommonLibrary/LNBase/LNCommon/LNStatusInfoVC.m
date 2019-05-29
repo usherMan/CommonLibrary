@@ -7,7 +7,6 @@
 //
 
 #import "LNStatusInfoVC.h"
-//#import "DoubleTitleNavigationBar.h"
 
 @interface LNStatusInfoVC ()
 

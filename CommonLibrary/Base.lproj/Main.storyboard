@@ -22,7 +22,7 @@
                                 <rect key="frame" x="172" y="328.5" width="31" height="30"/>
                                 <state key="normal" title="提示"/>
                                 <connections>
-                                    <action selector="btnClick:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ib7-SR-ejm"/>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiN-23-1iu"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzf-sA-mf7">

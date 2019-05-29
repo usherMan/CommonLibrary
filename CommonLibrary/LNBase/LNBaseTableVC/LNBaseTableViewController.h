@@ -12,7 +12,7 @@
 
 typedef void(^SuccessBlock)(id responseObject);
 typedef void(^FailedBlock)(NSString *errorMsg);
-@interface LNBaseTableViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface LNBaseTableViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,LNBaseTableViewCellDelegate>
 
 
 // 表视图
